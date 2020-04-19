@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import GalleryRepresentation from '../components/GalleryRepresentation'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   display: flex;
@@ -14,7 +15,9 @@ export default function GalleryListsPage(props) {
       {
         props.data && props.data.map(
           (currentValue, index) => (
-            <GalleryRepresentation url={currentValue.imageUrls[0]} key={index}/>     
+            <Link to={'/gallery/' + index.toString()} key={index}>
+              <GalleryRepresentation url={currentValue.imageUrls[0]}/>     
+            </Link>
           )
         )
       }
