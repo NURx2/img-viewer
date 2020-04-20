@@ -6,6 +6,6 @@ export default function GalleryPage(props) {
   props.data && console.log(props.data[props.match.params.galleryId].imageUrls)
 
   return (
-    <Gallery data={props.data && props.data[props.match.params.galleryId]}/>
+    <Gallery data={props.data ? props.data[props.match.params.galleryId] : {}}/>
   )
 }

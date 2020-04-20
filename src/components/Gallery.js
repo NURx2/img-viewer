@@ -1,37 +1,23 @@
-import React, {useState} from 'react'
-import { ReactBnbGallery } from 'react-bnb-gallery';
+import React from 'react'
+import ImageGallery from 'react-image-gallery'
+import "react-image-gallery/styles/css/image-gallery.css"
 
 export default function Gallery(props) {
-  const [galleryOpened, setGalleryOpened] = useState(false)
-
-  const getPhotoObjects = (data) => {
-    const photos = data && data.imageUrls.map(
-      (url) => (
-        {
-          photo: url,
-          caption: data.caption,
-          subcaption: data.type
-        }
-      )
-    )
-    console.log('GetPhotoObjects:', photos)
-    return photos
-  }
-
-  const toggleGallery = () => {
-    setGalleryOpened(!galleryOpened)
-  }
+  const items = props.data && 'imageUrls' in props.data && props.data.imageUrls.map(
+    url => {
+      return {
+        original: url,
+        thumbnail: url,
+      }
+    }
+  )
 
   return (
-    <div>
-      <button onClick={toggleGallery}>
-        Open gallery
-      </button>
-      <ReactBnbGallery
-        show={galleryOpened}
-        photos={props.data && getPhotoObjects(props.data)}
-        onClose={toggleGallery}
-      />
+    <div style={{height: '100vh', overflow: 'hidden'}}>
+      <div style={{margin: '10px auto 10px', textAlign: 'center'}}>{`${props.data.caption} [${props.data.type}]`}</div>
+      <div style={{transform: 'scale(0.9) translateY(-45px)'}}>
+        <ImageGallery items={items || []} showPlayButton={false} showBullets={true}/>
+        </div>
     </div>
   )
 }
