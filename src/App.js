@@ -7,12 +7,13 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { URL } from './static/urls'
 
 function App() {
   const [data, setData] = useState()
 
   !data &&
-  fetch("http://localhost:80/items", {
+  fetch(URL, {
     method: 'GET'
   })
   .then(
