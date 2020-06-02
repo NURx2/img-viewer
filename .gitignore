@@ -8,6 +8,11 @@
 # testing
 /coverage
 
+.idea/
+
+# package lock
+package-lock.json
+
 # production
 /build
 
