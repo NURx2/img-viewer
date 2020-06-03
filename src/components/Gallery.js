@@ -3,11 +3,12 @@ import ImageGallery from 'react-image-gallery'
 import "react-image-gallery/styles/css/image-gallery.css"
 
 export default function Gallery(props) {
-  const items = props.data && 'imageUrls' in props.data && props.data.imageUrls.map(
-    url => {
+  const items = props.data && 'images' in props.data && props.data.images.map(
+    obj => {
       return {
-        original: url,
-        thumbnail: url,
+        original: obj.url,
+        thumbnail: obj.url,
+        description: obj.rawData,
       }
     }
   )

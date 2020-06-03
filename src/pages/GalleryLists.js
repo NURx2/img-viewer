@@ -16,7 +16,7 @@ export default function GalleryListsPage(props) {
         props.data && props.data.map(
           (currentValue, index) => (
             <Link to={'/gallery/' + index.toString()} key={index}>
-              <GalleryRepresentation url={currentValue.imageUrls[0]}/>     
+              <GalleryRepresentation url={currentValue.images[0].url}/>     
             </Link>
           )
         )
