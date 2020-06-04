@@ -8,6 +8,7 @@ const ImageContainer = styled.div`
   margin: 10px 20px 10px;
   overflow: hidden;
   cursor: pointer;
+  border: 5px double black;
 `
 
 const Image = styled.img`
@@ -19,7 +20,7 @@ const Image = styled.img`
 export default function GalleryRepresentation(props) {
   return (
     <ImageContainer>
-      <Image src={props.url}/>
+      <Image src={props.url} alt='Картинка не загружена'/>
     </ImageContainer>
   )
 }

@@ -6,7 +6,8 @@ const Container = styled.div`
   height: 100%;
   background-color: #eb4d4b;
   text-align: center;
-  margin: 40px 0;
+  padding: 40px 0;
+  font-size: 40px;
 `;
 
 export default function NotFoundPage() {
