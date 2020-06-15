@@ -21,6 +21,7 @@ function push {
 
 function run {
   ${sudo_prefix} docker run \
+      -p 6783:6783 \
       ${REGISTRY_NAME}:${REGISTRY_TAG}
 }
 
