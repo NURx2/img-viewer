@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo_prefix="sudo"
-REGISTRY_NAME=Drones/frontend
+REGISTRY_NAME=drones/frontend
 REGISTRY_TAG=latest
 
 function build {
