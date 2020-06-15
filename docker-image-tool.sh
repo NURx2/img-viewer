@@ -20,7 +20,8 @@ function push {
 }
 
 function run {
-
+  ${sudo_prefix} docker run \
+      ${REGISTRY_NAME}:${REGISTRY_TAG}
 }
 
 function usage {
