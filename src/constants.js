@@ -14,3 +14,5 @@ export const SidebarCategoryHeight = 60;
 export const SidebarCategoryIconSize = 30;
 export const SidebarButtonHeight = 40;
 export const SidebarButtonPaddingLeft = 60;
+
+export const TapeImageSize = 400;

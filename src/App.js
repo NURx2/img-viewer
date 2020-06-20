@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import { URL } from './static/urls';
 import styled from '@emotion/styled';
-import TapeDetection from "./components/TapeDetection";
+import TapeDetection from "./pages/TapeDetection/TapeDetection";
 
 
 const MainPlatformContainer = styled.div`
